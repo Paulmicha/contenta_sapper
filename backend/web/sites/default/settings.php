@@ -280,7 +280,7 @@ $config_directories = [];
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = '';
+$settings['hash_salt'] = 'Hfy8nyNojveLMgLmIsHMCMlZlcvRS7kMe9hAdG-iG-MN8MkD4F-zAll4gU_JehPFAHspr83lXw';
 
 /**
  * Deployment identifier.
@@ -777,3 +777,14 @@ $settings['entity_update_backup'] = TRUE;
 # if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
+$databases['default']['default'] = array (
+  'database' => 'app',
+  'username' => 'app',
+  'password' => 'app',
+  'prefix' => '',
+  'host' => 'postgres',
+  'port' => '5432',
+  'namespace' => 'Drupal\\Core\\Database\\Driver\\pgsql',
+  'driver' => 'pgsql',
+);
+$config_directories['sync'] = 'profiles/contrib/contenta_jsonapi/config/sync';
