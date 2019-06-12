@@ -14,8 +14,6 @@ Project template instanciation :
 
 ```sh
 npx degit "sveltejs/sapper-template#rollup" .
-npm install
-npm run dev
 ```
 
 ## Backend install notes
