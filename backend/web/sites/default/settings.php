@@ -774,17 +774,6 @@ $settings['entity_update_backup'] = TRUE;
  * Keep this code block at the end of this file to take full effect.
  */
 #
-# if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
-#   include $app_root . '/' . $site_path . '/settings.local.php';
-# }
-$databases['default']['default'] = array (
-  'database' => 'app',
-  'username' => 'app',
-  'password' => 'app',
-  'prefix' => '',
-  'host' => 'postgres',
-  'port' => '5432',
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\pgsql',
-  'driver' => 'pgsql',
-);
-$config_directories['sync'] = 'profiles/contrib/contenta_jsonapi/config/sync';
+if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
+  include $app_root . '/' . $site_path . '/settings.local.php';
+}
