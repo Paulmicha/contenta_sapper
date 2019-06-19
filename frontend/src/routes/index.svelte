@@ -1,4 +1,8 @@
 <style>
+  @import "tailwindcss/base";
+  @import "tailwindcss/components";
+  @import "tailwindcss/utilities";
+
   h1,
   figure,
   p {

@@ -12,16 +12,14 @@ const dev = mode === "development";
 const legacy = !!process.env.SAPPER_LEGACY_BUILD;
 
 import sveltePreprocess from "svelte-preprocess";
-import postcss from "rollup-plugin-postcss";
+// import postcss from "rollup-plugin-postcss";
 
-// Update : instead of using postcss & tailwind from Sapper / Svelte, just
-// compile it separately.
-// See https://dev.to/muhajirdev/using-tailwindcss-with-sveltejs-2098
 // const preprocess = sveltePreprocess({ postcss: true });
 const preprocess = sveltePreprocess({
   postcss: {
     plugins: [
-      // require("tailwindcss"),
+      require("postcss-import"),
+      require("tailwindcss"),
       require("autoprefixer")({ browsers: "last 2 versions" })
     ]
   }
@@ -121,12 +119,5 @@ export default {
     ],
 
     onwarn
-  },
-
-  // Compiling global CSS classes using postcss & tailwind separately.
-  styles: {
-    input: "src/global.css",
-    output: "static/global.css",
-    plugins: [resolve(), postcss()]
   }
 };
