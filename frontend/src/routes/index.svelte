@@ -1,8 +1,4 @@
 <style>
-  @import "tailwindcss/base";
-  @import "tailwindcss/components";
-  @import "tailwindcss/utilities";
-
   h1,
   figure,
   p {
@@ -55,4 +51,4 @@
   </strong>
 </p>
 
-<p>Ok. Done. Modif 3.</p>
+<p>Ok. Done. Modif 4.</p>

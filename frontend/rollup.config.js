@@ -11,17 +11,47 @@ const mode = process.env.NODE_ENV;
 const dev = mode === "development";
 const legacy = !!process.env.SAPPER_LEGACY_BUILD;
 
-import sveltePreprocess from "svelte-preprocess";
-// import postcss from "rollup-plugin-postcss";
+import getPreprocessor from "svelte-preprocess";
+import postcss from "rollup-plugin-postcss";
+import path from "path";
 
-// const preprocess = sveltePreprocess({ postcss: true });
-const preprocess = sveltePreprocess({
-  postcss: {
-    plugins: [
-      require("postcss-import"),
-      require("tailwindcss"),
-      require("autoprefixer")({ browsers: "last 2 versions" })
-    ]
+class SvelteExtractor {
+  static extract(content) {
+    return content.match(/[A-Za-z0-9-_:\/]+/g) || [];
+  }
+}
+
+const postcssPlugins = (purgecss = false) => {
+  return [
+    require("postcss-import")(),
+    require("postcss-url")(),
+    require("tailwindcss")("./tailwind.config.js"),
+    require("autoprefixer")({ browsers: "last 3 version" }),
+    // Do not purge the CSS in dev mode to be able to play with classes in the browser dev-tools.
+    purgecss &&
+      require("@fullhuman/postcss-purgecss")({
+        content: ["./**/*.svelte"],
+        extractors: [
+          {
+            extractor: SvelteExtractor,
+
+            // Specify the file extensions to include when scanning for
+            // class names.
+            extensions: ["svelte"]
+          }
+        ],
+        // Whitelist selectors to stop Purgecss from removing them from your CSS.
+        whitelist: ["html", "body"]
+      })
+  ].filter(Boolean);
+};
+
+const preprocess = getPreprocessor({
+  transformers: {
+    postcss: {
+      // Don't need purgecss because Svelte handle unused css for you.
+      plugins: postcssPlugins()
+    }
   }
 });
 
@@ -95,7 +125,11 @@ export default {
         dev
       }),
       resolve(),
-      commonjs()
+      commonjs(),
+      postcss({
+        plugins: postcssPlugins(!dev),
+        extract: path.resolve(__dirname, "./static/global.css")
+      })
     ],
     external: Object.keys(pkg.dependencies).concat(
       require("module").builtinModules ||
