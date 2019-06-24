@@ -1,7 +1,9 @@
 /**
- * Global CSS index.
+ * Global CSS "index" file.
  *
- * Uses potcss + tailwind.
+ * This file gets compiled to static/global.css
+ * @see rollup.config.js
+ * See https://github.com/langbamit/sapper-postcss-tailwind-rollup
  */
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -7677,6 +7679,32 @@ video {
 
 .z-auto {
   z-index: auto;
+}
+
+/**
+ * Global CSS for the DropCap component.
+ */
+
+.dropcap {
+  font-family: serif;
+  font-size: 4.9rem;
+  float: left;
+  line-height: 1;
+  margin-right: 0.05em;
+}
+
+.dropcap:before,
+.dropcap:after {
+  content: "";
+  display: block;
+}
+
+.dropcap:before {
+  margin-bottom: -0.038em;
+}
+
+.dropcap:after {
+  margin-top: -0.05em;
 }
 
 @media (min-width: 640px) {

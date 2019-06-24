@@ -1,10 +1,13 @@
-
 /**
- * Global CSS index.
+ * Global CSS "index" file.
  *
- * Uses potcss + tailwind.
+ * This file gets compiled to static/global.css
+ * @see rollup.config.js
+ * See https://github.com/langbamit/sapper-postcss-tailwind-rollup
  */
 
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+@import-glob "./components/**/*.css";

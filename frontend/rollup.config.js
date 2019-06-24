@@ -23,6 +23,7 @@ class SvelteExtractor {
 
 const postcssPlugins = (purgecss = false) => {
   return [
+    require("postcss-import-ext-glob")(),
     require("postcss-import")(),
     require("postcss-url")(),
     require("tailwindcss")("./tailwind.config.js"),
