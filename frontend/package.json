@@ -14,7 +14,9 @@
   "dependencies": {
     "compression": "^1.7.1",
     "polka": "^0.5.0",
-    "sirv": "^0.4.0"
+    "sirv": "^0.4.0",
+    "typeface-open-sans": "0.0.54",
+    "typeface-scope-one": "0.0.71"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",

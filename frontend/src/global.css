@@ -6,8 +6,13 @@
  * See https://github.com/langbamit/sapper-postcss-tailwind-rollup
  */
 
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import "typeface-open-sans";
+@import "typeface-scope-one";
 
+@import "tailwindcss/base";
+@import "./base_styles.css";
+
+@import "tailwindcss/components";
 @import-glob "./components/**/*.css";
+
+@import "tailwindcss/utilities";
