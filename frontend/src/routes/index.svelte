@@ -2,4 +2,4 @@
   <title>Home | Umami Food Magazine</title>
 </svelte:head>
 
-<h1>TODO</h1>
+<h1 class="rfs-12">TODO</h1>

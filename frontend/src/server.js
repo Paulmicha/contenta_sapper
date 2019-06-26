@@ -6,7 +6,7 @@ import * as sapper from "@sapper/server";
 // Global CSS compiled to static/global.css
 // @see rollup.config.js
 // See https://github.com/langbamit/sapper-postcss-tailwind-rollup
-import "./global.css";
+import "./global_css/index.css";
 
 const { PORT, NODE_ENV } = process.env;
 const dev = NODE_ENV === "development";

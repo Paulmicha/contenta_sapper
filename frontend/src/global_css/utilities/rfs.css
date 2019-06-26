@@ -1,0 +1,65 @@
+/**
+ * Responsive font sizes global CSS utility classes.
+ *
+ * Replaces https://tailwindcss.com/docs/font-size
+ * Uses https://github.com/twbs/rfs
+ * Follows nomenclature from https://tailwindcss.com/docs/width/
+ *
+ * TODO Write a utility plugin instead ?
+ * See https://tailwindcss.com/docs/plugins#responsive-and-pseudo-class-variants
+ */
+
+.rfs-0 {
+  font-size: 0;
+}
+.rfs-1 {
+  responsive-font-size: 0.25rem;
+}
+.rfs-2 {
+  responsive-font-size: 0.5rem;
+}
+.rfs-3 {
+  responsive-font-size: 0.75rem;
+}
+.rfs-4 {
+  responsive-font-size: 1rem;
+}
+.rfs-5 {
+  responsive-font-size: 1.25rem;
+}
+.rfs-6 {
+  responsive-font-size: 1.5rem;
+}
+.rfs-8 {
+  responsive-font-size: 2rem;
+}
+.rfs-10 {
+  responsive-font-size: 2.5rem;
+}
+.rfs-12 {
+  responsive-font-size: 3rem;
+}
+.rfs-16 {
+  responsive-font-size: 4rem;
+}
+.rfs-20 {
+  responsive-font-size: 5rem;
+}
+.rfs-24 {
+  responsive-font-size: 6rem;
+}
+.rfs-32 {
+  responsive-font-size: 8rem;
+}
+.rfs-40 {
+  responsive-font-size: 10rem;
+}
+.rfs-48 {
+  responsive-font-size: 12rem;
+}
+.rfs-56 {
+  responsive-font-size: 14rem;
+}
+.rfs-64 {
+  responsive-font-size: 16rem;
+}

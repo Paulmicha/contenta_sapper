@@ -16,3 +16,4 @@
 @import-glob "./components/**/*.css";
 
 @import "tailwindcss/utilities";
+@import "./utilities/rfs.css";

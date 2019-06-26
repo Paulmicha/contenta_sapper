@@ -1,4 +1,7 @@
 module.exports = {
+  corePlugins: {
+    fontSize: false
+  },
   theme: {
     fontFamily: {
       sans:

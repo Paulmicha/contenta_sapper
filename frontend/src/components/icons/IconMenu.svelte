@@ -1,4 +1,8 @@
 <style>
+  .icon {
+    min-width: theme("spacing.12");
+    min-height: theme("spacing.12");
+  }
   .icon-menu {
     color: #000;
     position: absolute;
@@ -30,6 +34,6 @@
   }
 </style>
 
-<div class="relative inline-block align-baseline">
-  <div class="icon-menu" aria-hidden="true" />
+<div class="relative flex icon" aria-hidden="true">
+  <div class="icon-menu" />
 </div>

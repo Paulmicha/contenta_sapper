@@ -1,5 +1,6 @@
 <script>
   import IconMenu from "./icons/IconMenu.svelte";
+
   export let segment;
 
   // TODO fetch from Drupal menu via REST API.
