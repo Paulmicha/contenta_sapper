@@ -1,36 +1,41 @@
 <style>
   .icon {
-    min-width: theme("spacing.12");
-    min-height: theme("spacing.12");
+    --icon-size: theme("spacing.5");
+    --icon-ratio: 2.5;
+    --icon-spacing: theme("spacing.2");
+    --icon-stroke-width: theme("spacing.1");
+
+    min-width: var(--icon-size);
+    min-height: var(--icon-size);
   }
-  .icon-menu {
-    color: #000;
+
+  .icon-menu,
+  .icon-menu::before,
+  .icon-menu::after {
     position: absolute;
-    margin-left: 2px;
-    margin-top: 10px;
-    width: 17px;
-    height: 1px;
+    left: 0;
+    width: var(--icon-size);
+    height: var(--icon-stroke-width);
     background-color: currentColor;
+  }
+
+  .icon-menu::before,
+  .icon-menu::after {
+    content: "";
+  }
+
+  .icon-menu {
+    margin-top: calc(
+      var(--icon-size) / var(--icon-ratio) - var(--icon-stroke-width) / 2
+    );
   }
 
   .icon-menu:before {
-    content: "";
-    position: absolute;
-    top: -5px;
-    left: 0;
-    width: 17px;
-    height: 1px;
-    background-color: currentColor;
+    top: calc(-1 * var(--icon-size) / var(--icon-ratio));
   }
 
   .icon-menu:after {
-    content: "";
-    position: absolute;
-    top: 5px;
-    left: 0;
-    width: 17px;
-    height: 1px;
-    background-color: currentColor;
+    top: calc(var(--icon-size) / var(--icon-ratio));
   }
 </style>
 
