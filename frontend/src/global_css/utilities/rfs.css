@@ -13,53 +13,53 @@
   font-size: 0;
 }
 .rfs-1 {
-  responsive-font-size: 0.25rem;
+  responsive-font-size: theme("spacing.1");
 }
 .rfs-2 {
-  responsive-font-size: 0.5rem;
+  responsive-font-size: theme("spacing.2");
 }
 .rfs-3 {
-  responsive-font-size: 0.75rem;
+  responsive-font-size: theme("spacing.3");
 }
 .rfs-4 {
-  responsive-font-size: 1rem;
+  responsive-font-size: theme("spacing.4");
 }
 .rfs-5 {
-  responsive-font-size: 1.25rem;
+  responsive-font-size: theme("spacing.5");
 }
 .rfs-6 {
-  responsive-font-size: 1.5rem;
+  responsive-font-size: theme("spacing.6");
 }
 .rfs-8 {
-  responsive-font-size: 2rem;
+  responsive-font-size: theme("spacing.8");
 }
 .rfs-10 {
-  responsive-font-size: 2.5rem;
+  responsive-font-size: theme("spacing.10");
 }
 .rfs-12 {
-  responsive-font-size: 3rem;
+  responsive-font-size: theme("spacing.12");
 }
 .rfs-16 {
-  responsive-font-size: 4rem;
+  responsive-font-size: theme("spacing.16");
 }
 .rfs-20 {
-  responsive-font-size: 5rem;
+  responsive-font-size: theme("spacing.20");
 }
 .rfs-24 {
-  responsive-font-size: 6rem;
+  responsive-font-size: theme("spacing.24");
 }
 .rfs-32 {
-  responsive-font-size: 8rem;
+  responsive-font-size: theme("spacing.32");
 }
 .rfs-40 {
-  responsive-font-size: 10rem;
+  responsive-font-size: theme("spacing.40");
 }
 .rfs-48 {
-  responsive-font-size: 12rem;
+  responsive-font-size: theme("spacing.48");
 }
 .rfs-56 {
-  responsive-font-size: 14rem;
+  responsive-font-size: theme("spacing.56");
 }
 .rfs-64 {
-  responsive-font-size: 16rem;
+  responsive-font-size: theme("spacing.64");
 }

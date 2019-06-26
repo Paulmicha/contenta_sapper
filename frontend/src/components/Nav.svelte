@@ -5,9 +5,12 @@
 
   // TODO fetch from Drupal menu via REST API.
   const menu_links = [
-    { path: "articles", label: "Articles" },
-    { path: "recipes", label: "Recipes" }
+    { href: "articles", label: "Articles" },
+    { href: "recipes", label: "Recipes" }
   ];
+
+  // TODO get Drupal's translatable strings.
+  const nav_label = "Primary";
 </script>
 
 <style>
@@ -18,11 +21,12 @@
   }
 </style>
 
-<nav>
+<nav aria-labelledby="primary-nav-label">
+  <div id="primary-nav-label" hidden>{nav_label}</div>
   <ul>
     {#each menu_links as l}
       <li>
-        <a class="font-serif {segment === l.path ? 'is-on' : ''}" href={l.path}>
+        <a class="font-serif {segment === l.path ? 'is-on' : ''}" href={l.href}>
            {l.label}
         </a>
       </li>
