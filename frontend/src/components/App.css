@@ -1,0 +1,10 @@
+/**
+ * Global CSS for the whole application "wrapper" (layout) component.
+ *
+ * @see src/template.html
+ */
+
+#sapper {
+  @apply max-w-6xl;
+  @apply mx-auto;
+}

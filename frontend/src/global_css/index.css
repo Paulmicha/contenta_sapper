@@ -13,7 +13,7 @@
 @import "./base_styles.css";
 
 @import "tailwindcss/components";
-@import-glob "./components/**/*.css";
+@import-glob "../components/**/*.css";
 
 @import "tailwindcss/utilities";
-@import "./utilities/rfs.css";
+@import-glob "./utilities/**/*.css";

@@ -1,0 +1,44 @@
+/**
+ * Global CSS for button components.
+ *
+ * @see ../backend/web/core/profiles/demo_umami/themes/umami/css/base.css
+ */
+
+.btn,
+[type="reset"],
+[type="submit"] {
+  display: inline-block;
+  min-width: inherit;
+  max-width: inherit;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  border: 2px solid #008068;
+  background-color: #008068;
+  font-weight: normal;
+  @apply rounded;
+  @apply font-serif;
+  @apply rfs-5;
+  @apply py-2;
+  @apply px-3;
+}
+
+.btn:hover,
+.btn:active,
+.btn:focus {
+  transition: background-color 0.5s ease;
+  text-decoration: none;
+  color: #000;
+  background-color: #e6eee0;
+}
+
+.btn[disabled]:hover,
+.btn[disabled]:active,
+.btn[disabled]:focus,
+.btn[disabled] {
+  cursor: default;
+  color: #464646;
+  background: #767775;
+}

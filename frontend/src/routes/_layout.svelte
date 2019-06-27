@@ -1,4 +1,5 @@
 <script>
+  import BgCanvas from "../components/BgCanvas.svelte";
   import Nav from "../components/Nav.svelte";
   import Logo from "../components/Logo.svelte";
   import SearchForm from "../components/SearchForm.svelte";
@@ -21,3 +22,5 @@
 <main>
   <slot />
 </main>
+
+<BgCanvas />

@@ -810,9 +810,15 @@ video {
   height: auto;
 }
 
-html {
+/* html {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   background-position: -0.4rem -0.4rem;
+} */
+
+html,
+body {
+  margin: 0;
+  height: 100%;
 }
 
 h1,
@@ -821,12 +827,30 @@ h3 {
   font-family: "Scope One", Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
-button {
+button,
+input[type="submit"] {
   cursor: pointer;
 }
 
-button:disabled {
+button[disabled],
+button[disabled]:hover,
+button[disabled]:active,
+button[disabled]:focus,
+input[type="submit"][disabled],
+input[type="submit"][disabled]:hover,
+input[type="submit"][disabled]:active,
+input[type="submit"][disabled]:focus {
   cursor: default;
+}
+
+textarea,
+input[type="text"],
+input[type="search"] {
+  border: 2px solid #718096; /* or : currentColor; */
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .container {
@@ -855,6 +879,95 @@ button:disabled {
   .container {
     max-width: 1280px;
   }
+}
+
+/**
+ * Global CSS for the whole application "wrapper" (layout) component.
+ *
+ * @see src/template.html
+ */
+
+#sapper {
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/**
+ * Global CSS for button components.
+ *
+ * @see ../backend/web/core/profiles/demo_umami/themes/umami/css/base.css
+ */
+
+.btn,
+[type="reset"],
+[type="submit"] {
+  display: inline-block;
+  min-width: inherit;
+  max-width: inherit;
+  cursor: pointer;
+  -webkit-transition: background-color 0.5s ease;
+  -o-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  border: 2px solid #008068;
+  background-color: #008068;
+  font-weight: normal;
+  border-radius: 0.25rem;
+  font-family: "Scope One", Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: 1.25rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.btn:hover,
+.btn:active,
+.btn:focus {
+  -webkit-transition: background-color 0.5s ease;
+  -o-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+  text-decoration: none;
+  color: #000;
+  background-color: #e6eee0;
+}
+
+.btn[disabled]:hover,
+.btn[disabled]:active,
+.btn[disabled]:focus,
+.btn[disabled] {
+  cursor: default;
+  color: #464646;
+  background: #767775;
+}
+
+/**
+ * Global CSS for the DropCap component.
+ */
+
+.dropcap {
+  font-family: serif;
+  font-size: 4.9rem;
+  float: left;
+  line-height: 1;
+  margin-right: 0.05em;
+}
+
+.dropcap:before,
+.dropcap:after {
+  content: "";
+  display: block;
+}
+
+.dropcap:before {
+  margin-bottom: -0.038em;
+}
+
+.dropcap:after {
+  margin-top: -0.05em;
 }
 
 .appearance-none {
@@ -7852,6 +7965,19 @@ button:disabled {
 
 .z-auto {
   z-index: auto;
+}
+
+/**
+ * Misc. global CSS utility classes.
+ */
+
+.visually-hidden {
+  position: absolute !important;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+  word-wrap: normal;
 }
 
 /**

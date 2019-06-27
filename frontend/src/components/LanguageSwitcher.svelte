@@ -14,10 +14,12 @@
 
 <nav aria-labelledby="language-switcher-nav-label">
   <div id="language-switcher-nav-label" hidden>{nav_label}</div>
-  <ul>
+  <ul class="inline-flex">
     {#each language_links as l}
-      <li>
-        <a class={active_language === l.langcode ? 'is-on' : ''} href={l.href}>
+      <li class="mr-2">
+        <a
+          class="p-1 {active_language === l.langcode ? 'is-on font-bold' : 'text-gray-600'}"
+          href={l.href}>
            {l.label}
         </a>
       </li>
