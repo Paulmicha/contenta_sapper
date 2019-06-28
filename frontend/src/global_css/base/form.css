@@ -1,0 +1,23 @@
+button,
+input[type="submit"] {
+  cursor: pointer;
+}
+
+button[disabled],
+button[disabled]:hover,
+button[disabled]:active,
+button[disabled]:focus,
+input[type="submit"][disabled],
+input[type="submit"][disabled]:hover,
+input[type="submit"][disabled]:active,
+input[type="submit"][disabled]:focus {
+  cursor: default;
+}
+
+textarea,
+input[type="text"],
+input[type="search"] {
+  border: theme("borderWidth.2") solid theme("textColor.gray.600"); /* or : currentColor; */
+  @apply py-3;
+  @apply px-2;
+}

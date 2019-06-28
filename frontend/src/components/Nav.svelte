@@ -17,6 +17,29 @@
 </script>
 
 <style>
+  .menu-link {
+    display: inline-block;
+    transition: all 0.2s;
+    text-decoration: none;
+    color: inherit;
+    border-bottom: solid 0.15em transparent;
+    background-color: inherit;
+    @apply font-serif;
+  }
+  .menu-link:hover,
+  .menu-link.is-active:hover,
+  .menu-link:focus {
+    text-decoration: none;
+    color: #da3c13;
+    border-bottom-color: #da3c13;
+    background-color: inherit;
+  }
+  .menu-link:active,
+  .menu-link.is-active {
+    text-decoration: none;
+    border-bottom-color: #da3c13;
+  }
+
   .nav-toggle {
     display: block;
     min-height: 1em;
@@ -28,9 +51,9 @@
   <div id="primary-nav-label" hidden>{nav_label}</div>
   <ul class="flex mr-2">
     {#each menu_links as l}
-      <li class="mr-2">
+      <li class="mr-2 text-center">
         <a
-          class="p-1 font-serif {segment === l.path ? 'is-on' : ''}"
+          class="mr-10 p-1 font-serif rfs-5 menu-link {segment === l.href ? 'is-active' : ''}"
           href={l.href}>
            {l.label}
         </a>

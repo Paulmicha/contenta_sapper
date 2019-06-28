@@ -6,203 +6,13 @@
  * See https://github.com/langbamit/sapper-postcss-tailwind-rollup
  */
 
-/* open-sans-300normal - latin */
-
-@font-face {
-  font-family: 'Open Sans';
-
-  font-style: normal;
-
-  font-display: swap;
-
-  font-weight: 300;
-
-  src:
-    local('Open Sans Light '),
-    local('Open Sans-Light'),
-    url('../../node_modules/typeface-open-sans/files/open-sans-latin-300.woff2') format('woff2'), 
-    url('../../node_modules/typeface-open-sans/files/open-sans-latin-300.woff') format('woff'); /* Modern Browsers */
-}
-
-/* open-sans-300italic - latin */
-
-@font-face {
-  font-family: 'Open Sans';
-
-  font-style: italic;
-
-  font-display: swap;
-
-  font-weight: 300;
-
-  src:
-    local('Open Sans Light italic'),
-    local('Open Sans-Lightitalic'),
-    url('../../node_modules/typeface-open-sans/files/open-sans-latin-300italic.woff2') format('woff2'), 
-    url('../../node_modules/typeface-open-sans/files/open-sans-latin-300italic.woff') format('woff'); /* Modern Browsers */
-}
-
-/* open-sans-400normal - latin */
-
-@font-face {
-  font-family: 'Open Sans';
-
-  font-style: normal;
-
-  font-display: swap;
-
-  font-weight: 400;
-
-  src:
-    local('Open Sans Regular '),
-    local('Open Sans-Regular'),
-    url('../../node_modules/typeface-open-sans/files/open-sans-latin-400.woff2') format('woff2'), 
-    url('../../node_modules/typeface-open-sans/files/open-sans-latin-400.woff') format('woff'); /* Modern Browsers */
-}
-
-/* open-sans-400italic - latin */
-
-@font-face {
-  font-family: 'Open Sans';
-
-  font-style: italic;
-
-  font-display: swap;
-
-  font-weight: 400;
-
-  src:
-    local('Open Sans Regular italic'),
-    local('Open Sans-Regularitalic'),
-    url('../../node_modules/typeface-open-sans/files/open-sans-latin-400italic.woff2') format('woff2'), 
-    url('../../node_modules/typeface-open-sans/files/open-sans-latin-400italic.woff') format('woff'); /* Modern Browsers */
-}
-
-/* open-sans-600normal - latin */
-
-@font-face {
-  font-family: 'Open Sans';
-
-  font-style: normal;
-
-  font-display: swap;
-
-  font-weight: 600;
-
-  src:
-    local('Open Sans SemiBold '),
-    local('Open Sans-SemiBold'),
-    url('../../node_modules/typeface-open-sans/files/open-sans-latin-600.woff2') format('woff2'), 
-    url('../../node_modules/typeface-open-sans/files/open-sans-latin-600.woff') format('woff'); /* Modern Browsers */
-}
-
-/* open-sans-600italic - latin */
-
-@font-face {
-  font-family: 'Open Sans';
-
-  font-style: italic;
-
-  font-display: swap;
-
-  font-weight: 600;
-
-  src:
-    local('Open Sans SemiBold italic'),
-    local('Open Sans-SemiBolditalic'),
-    url('../../node_modules/typeface-open-sans/files/open-sans-latin-600italic.woff2') format('woff2'), 
-    url('../../node_modules/typeface-open-sans/files/open-sans-latin-600italic.woff') format('woff'); /* Modern Browsers */
-}
-
-/* open-sans-700normal - latin */
-
-@font-face {
-  font-family: 'Open Sans';
-
-  font-style: normal;
-
-  font-display: swap;
-
-  font-weight: 700;
-
-  src:
-    local('Open Sans Bold '),
-    local('Open Sans-Bold'),
-    url('../../node_modules/typeface-open-sans/files/open-sans-latin-700.woff2') format('woff2'), 
-    url('../../node_modules/typeface-open-sans/files/open-sans-latin-700.woff') format('woff'); /* Modern Browsers */
-}
-
-/* open-sans-700italic - latin */
-
-@font-face {
-  font-family: 'Open Sans';
-
-  font-style: italic;
-
-  font-display: swap;
-
-  font-weight: 700;
-
-  src:
-    local('Open Sans Bold italic'),
-    local('Open Sans-Bolditalic'),
-    url('../../node_modules/typeface-open-sans/files/open-sans-latin-700italic.woff2') format('woff2'), 
-    url('../../node_modules/typeface-open-sans/files/open-sans-latin-700italic.woff') format('woff'); /* Modern Browsers */
-}
-
-/* open-sans-800normal - latin */
-
-@font-face {
-  font-family: 'Open Sans';
-
-  font-style: normal;
-
-  font-display: swap;
-
-  font-weight: 800;
-
-  src:
-    local('Open Sans ExtraBold '),
-    local('Open Sans-ExtraBold'),
-    url('../../node_modules/typeface-open-sans/files/open-sans-latin-800.woff2') format('woff2'), 
-    url('../../node_modules/typeface-open-sans/files/open-sans-latin-800.woff') format('woff'); /* Modern Browsers */
-}
-
-/* open-sans-800italic - latin */
-
-@font-face {
-  font-family: 'Open Sans';
-
-  font-style: italic;
-
-  font-display: swap;
-
-  font-weight: 800;
-
-  src:
-    local('Open Sans ExtraBold italic'),
-    local('Open Sans-ExtraBolditalic'),
-    url('../../node_modules/typeface-open-sans/files/open-sans-latin-800italic.woff2') format('woff2'), 
-    url('../../node_modules/typeface-open-sans/files/open-sans-latin-800italic.woff') format('woff'); /* Modern Browsers */
-}
-
-/* scope-one-400normal - latin */
-
-@font-face {
-  font-family: 'Scope One';
-
-  font-style: normal;
-
-  font-display: swap;
-
-  font-weight: 400;
-
-  src:
-    local('Scope One Regular '),
-    local('Scope One-Regular'),
-    url('../../node_modules/typeface-scope-one/files/scope-one-latin-400.woff2') format('woff2'), 
-    url('../../node_modules/typeface-scope-one/files/scope-one-latin-400.woff') format('woff'); /* Modern Browsers */
-}
+/*
+// TODO sapper only can serve assets from the ./static dir, so these fail.
+// -> workaround :
+// @see frontend/src/global_css/base_styles.css
+@import "typeface-open-sans";
+@import "typeface-scope-one";
+*/
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
@@ -810,21 +620,88 @@ video {
   height: auto;
 }
 
-/* html {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  background-position: -0.4rem -0.4rem;
-} */
+/**
+ * Global base styles : webfonts.
+ */
 
-html,
-body {
-  margin: 0;
-  height: 100%;
+/* open-sans-400normal - latin */
+
+@font-face {
+  font-family: "Open Sans";
+
+  font-style: normal;
+
+  font-display: swap;
+
+  font-weight: 400;
+
+  src: local("Open Sans Regular "), local("Open Sans-Regular"),
+    url("/open-sans-latin-400.woff2") format("woff2"),
+    url("/open-sans-latin-400.woff") format("woff");
 }
 
-h1,
-h2,
-h3 {
-  font-family: "Scope One", Georgia, Cambria, "Times New Roman", Times, serif;
+/* open-sans-400italic - latin */
+
+@font-face {
+  font-family: "Open Sans";
+
+  font-style: italic;
+
+  font-display: swap;
+
+  font-weight: 400;
+
+  src: local("Open Sans Regular italic"), local("Open Sans-Regularitalic"),
+    url("/open-sans-latin-400italic.woff2") format("woff2"),
+    url("/open-sans-latin-400italic.woff") format("woff");
+}
+
+/* open-sans-700normal - latin */
+
+@font-face {
+  font-family: "Open Sans";
+
+  font-style: normal;
+
+  font-display: swap;
+
+  font-weight: 700;
+
+  src: local("Open Sans Bold "), local("Open Sans-Bold"),
+    url("/open-sans-latin-700.woff2") format("woff2"),
+    url("/open-sans-latin-700.woff") format("woff");
+}
+
+/* open-sans-700italic - latin */
+
+@font-face {
+  font-family: "Open Sans";
+
+  font-style: italic;
+
+  font-display: swap;
+
+  font-weight: 700;
+
+  src: local("Open Sans Bold italic"), local("Open Sans-Bolditalic"),
+    url("/open-sans-latin-700italic.woff2") format("woff2"),
+    url("/open-sans-latin-700italic.woff") format("woff");
+}
+
+/* scope-one-400normal - latin */
+
+@font-face {
+  font-family: "Scope One";
+
+  font-style: normal;
+
+  font-display: swap;
+
+  font-weight: 400;
+
+  src: local("Scope One Regular "), local("Scope One-Regular"),
+    url("/scope-one-latin-400.woff2") format("woff2"),
+    url("/scope-one-latin-400.woff") format("woff");
 }
 
 button,
@@ -851,6 +728,22 @@ input[type="search"] {
   padding-bottom: 0.75rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Scope One", Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
 .container {

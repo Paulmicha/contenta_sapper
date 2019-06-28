@@ -6,11 +6,16 @@
  * See https://github.com/langbamit/sapper-postcss-tailwind-rollup
  */
 
+/*
+// TODO sapper only can serve assets from the ./static dir, so these fail.
+// -> workaround :
+// @see frontend/src/global_css/base_styles.css
 @import "typeface-open-sans";
 @import "typeface-scope-one";
+*/
 
 @import "tailwindcss/base";
-@import "./base_styles.css";
+@import-glob "./base/**/*.css";
 
 @import "tailwindcss/components";
 @import-glob "../components/**/*.css";
