@@ -13,6 +13,12 @@ const dev = NODE_ENV === "development";
 
 polka() // You can also use Express
   .use(
+    // TODO [wip] manage current logged in user session data.
+    // @see src/stores/session.js
+    // See https://www.drupal.org/project/simple_oauth
+    // See http://www.passportjs.org/docs/oauth2-api/
+    // See https://github.com/sveltejs/realworld/blob/master/src/server.js
+    //  + https://github.com/contentacms/contentajsRedis ?
     compression({ threshold: 0 }),
     sirv("static", { dev }),
     sapper.middleware()

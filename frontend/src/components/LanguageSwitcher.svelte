@@ -1,8 +1,16 @@
 <script>
-  // Currently active language.
-  export let active_language = "en";
+  import language from "../stores/language.js";
 
-  // TODO fetch current page URL in each language from Drupal.
+  // Currently active language.
+  // TODO we need 1. Link to current page in other language (navigation) AND 2.
+  // to switch currently active language -> how to do that ? Current attempt :
+  // use on:click + href (WIP untested).
+  // Caveats (Drupal 8 JSON API in core not 100% ready yet) :
+  // See https://www.drupal.org/project/jsonapi/issues/2794431
+  export let active_language = language;
+
+  // TODO fetch active languages list + current page URL in each language from
+  // Drupal.
   const language_links = [
     { langcode: "en", href: "en", label: "English" },
     { langcode: "es", href: "es", label: "Español" }
@@ -19,7 +27,10 @@
       <li class="mr-2">
         <a
           class="p-1 {active_language === l.langcode ? 'is-on font-bold' : 'text-gray-600'}"
-          href={l.href}>
+          href={l.href}
+          on:click={() => {
+            language.update(l.langcode);
+          }}>
            {l.label}
         </a>
       </li>

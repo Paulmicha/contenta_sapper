@@ -896,6 +896,8 @@ input[type="search"] {
 /**
  * Global CSS for button components.
  *
+ * Also applies to base input of type 'submit' and 'reset' (but not buttons).
+ *
  * @see ../backend/web/core/profiles/demo_umami/themes/umami/css/base.css
  */
 
@@ -926,7 +928,13 @@ input[type="search"] {
 
 .btn:hover,
 .btn:active,
-.btn:focus {
+.btn:focus,
+[type="reset"]:hover,
+[type="reset"]:active,
+[type="reset"]:focus,
+[type="submit"]:hover,
+[type="submit"]:active,
+[type="submit"]:focus {
   -webkit-transition: background-color 0.5s ease;
   -o-transition: background-color 0.5s ease;
   transition: background-color 0.5s ease;
@@ -935,10 +943,18 @@ input[type="search"] {
   background-color: #e6eee0;
 }
 
+.btn[disabled],
 .btn[disabled]:hover,
 .btn[disabled]:active,
 .btn[disabled]:focus,
-.btn[disabled] {
+[type="reset"][disabled],
+[type="reset"][disabled]:hover,
+[type="reset"][disabled]:active,
+[type="reset"][disabled]:focus,
+[type="submit"][disabled],
+[type="submit"][disabled]:hover,
+[type="submit"][disabled]:active,
+[type="submit"][disabled]:focus {
   cursor: default;
   color: #464646;
   background: #767775;

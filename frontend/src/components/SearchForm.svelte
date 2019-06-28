@@ -2,7 +2,7 @@
   // TODO get Drupal's translatable strings.
   const search_label = "Site";
   const search_input_label = "Keywords";
-  const submit_label = "Submit";
+  const submit_label = "Search";
 </script>
 
 <form class="inline-flex" role="search" aria-labelledby="search-label">
