@@ -5,7 +5,7 @@
 Note : all commands below use aliases defined in dev stack. To load them in current terminal session, you may source the bootstrap shell include from project docroot :
 
 ```sh
-. cwt/bootstrap
+. cwt/bootstrap.sh
 ```
 
 ## Usage
