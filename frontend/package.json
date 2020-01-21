@@ -32,7 +32,7 @@
     "postcss-import-ext-glob": "^1.1.0",
     "postcss-url": "^8.0.0",
     "rfs": "^8.0.4",
-    "rollup": "^1.0.0",
+    "rollup": "^1.29.1",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-commonjs": "^9.1.6",
     "rollup-plugin-node-resolve": "^4.0.0",
